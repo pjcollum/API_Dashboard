@@ -26,7 +26,7 @@ router.get('/PRsonarcloud', async (req, res) => {
     let data = await getapi.getPRSonarcloud()
     //console.log(data)
     data = JSON.parse(data);
-    console.log(data.pullRequests[0].title)
+    //console.log(data.pullRequests[0].title)
 
     res.render('prsonarcloud', {
         data,
@@ -38,9 +38,21 @@ router.get('/PRsonarcloud', async (req, res) => {
     })
     //console.log(data);
 })
+router.get('/sentry', async (req, res) => {
+    let data = await getapi.getSentry()
+    console.log(data)
+    //data = JSON.parse(data);
+    //console.log(data.pullRequests[0].title)
+
+    res.render('sentry', {
+        data, 
+        //class: data.platform
+    })
+    //console.log(data);
+})
 router.get('/jenkins', async (req, res) => {
     let data = await getapi.getJenkins()
-    console.log(data)
+    //console.log(data)
     //data = JSON.parse(data);
     //console.log(data.pullRequests[0].title)
 
