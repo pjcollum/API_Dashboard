@@ -13,7 +13,13 @@
 <p>isMain: {{isMain}}</p>
 <p>Analysis Date: {{date}}</p>
 <p>Status: {{Status}}</p> --}}
+{{!-- 
+<p>Platform: {{data}}</p> --}}
 
-<p>Platform: {{data}}</p>
+<ul>
+    {{#each data}}
+        <li>{{@key}}: {{this}}</li>
+    {{/each}}
+</ul>
 
 </div>
