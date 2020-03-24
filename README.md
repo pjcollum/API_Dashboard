@@ -1,3 +1,14 @@
+## API Dashboard Project
+
+As a part of my apprenticeship, i am required to complete several projects.
+
+The dashboards display information from several sources
+- Sentry for error tracking
+- SonarCloud for code quality
+- Jenkins for build results
+- Service Status for display of current issues
+- The information should be able to be updated periodically while the application is loaded.
+
 ##  Folder structure 
 
 - public/  any front end resources,js,CSS,images,ect...
