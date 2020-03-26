@@ -40,23 +40,56 @@ router.get('/PRsonarcloud', async (req, res) => {
 })
 router.get('/sentry', async (req, res) => {
     let data = await getapi.getSentry()
-    console.log(data)
-    //data = JSON.parse(data);
-    //console.log(data.pullRequests[0].title)
 
+    //console.log(data)
+
+     sentryArray = []
+
+     for (const object of data){
+            let newObject = {
+                title: object.title,
+                culprit: object.culprit,
+                permalink: object.permalink,
+                lastSeen: object.lastSeen,
+                platform: object.platform
+            }
+
+            sentryArray.push(newObject);
+     }
+        
     res.render('sentry', {
-        data, 
-        //class: data.platform
+        sentryArray, 
     })
-    //console.log(data);
 })
+
 router.get('/jenkins', async (req, res) => {
     let data = await getapi.getJenkins()
+    console.log(data)
+
+    jenkinsArray = []
+
+     for (const jenkinsData of data.jobs){
+            let newObject1 = {
+                name: jenkinsData.name,
+                url: jenkinsData.url,
+                color: jenkinsData.color
+            }
+            
+            
+            jenkinsArray.push(newObject1);
+     }
+    res.render('jenkins', {
+        jenkinsArray,
+    })
+ 
+})
+router.get('/serviceStatus', async (req, res) => {
+    let data = await getapi.getServiceStatus()
     //console.log(data)
     //data = JSON.parse(data);
     //console.log(data.pullRequests[0].title)
 
-    res.render('jenkins', {
+    res.render('serviceStatus', {
         data,
         //class: data._class
     })

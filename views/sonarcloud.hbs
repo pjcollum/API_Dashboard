@@ -11,6 +11,14 @@
 <p>Branch 1 Name: {{name}}</p>
 <p>isMain: {{isMain}}</p>
 <p>Analysis Date: {{date}}</p>
-<p>Status: {{Status}}</p>
+<p>Quality Gate Status: {{Status}}</p>
+
+
+<p>Cycle through showing whether the service has passed the quality gate:</p>
+<ul>
+    {{#each data}}
+        <li>{{@key}}: {{this}}</li>
+    {{/each}}
+</ul>
 
 </div>

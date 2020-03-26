@@ -58,7 +58,7 @@ a:link, a:visited {
     display: block;
 }
 
-/* api Styling */
+/* api Styling  need to delete this, from mern project*/
 .apiDiv{
     background-image: url("/images/beach.jpeg");
     /* background-position: center; */
@@ -127,16 +127,23 @@ input[type=text] {
     width:100px;
     height: 100px;
 }
-
+/* Sentry Styling */
 .sentryDiv{
     align-items: center;
     display:flex;
     flex-direction: column;
 }
 
+/* Jenkins Styling */
 .jenkinsDiv{
     align-items: center;
     display:flex;
     flex-direction: column;
     margin-top:20%;
+}
+/* Service Status Div */
+.serviceStatusDiv{
+    align-items: center;
+    display:flex;
+    flex-direction: column;
 }

@@ -10,9 +10,15 @@
 <p >The hat has chosen: <h2 class="harryFont1">{{data}}</h2></p> --}}
 
 <p>Class Name: {{data}}</p>
-{{!-- 
-<p>isMain: {{isMain}}</p>
-<p>Analysis Date: {{date}}</p>
-<p>Status: {{Status}}</p> --}}
+
+<ul>
+    {{#each jenkinsArray}}
+        {{#each this}}
+        
+        <li>{{@key}}: {{this}}</li>
+        {{/each}}
+        <p>-----</p>
+    {{/each}}
+</ul>
 
 </div>
