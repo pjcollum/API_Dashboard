@@ -2,6 +2,9 @@ html{
     box-sizing: border-box;
     
 }
+body{
+    background-color: #f3f3f3;
+}
 /* index Styling */
 .homeDiv{
     align-items: center;
@@ -49,10 +52,11 @@ a:link, a:visited {
     border-right-style: solid;
     border-right-color:lightgrey;
   }
-.navItem{
+a.navItem{
     display: flex; 
     justify-content: left; 
     align-items: left;
+    background-color:#003253;
 }
 .hrefDiv{
     display: block;
@@ -127,11 +131,60 @@ input[type=text] {
     width:100px;
     height: 100px;
 }
+
+.sonarcloud{
+    width: 795px;
+    height: 300px;
+    border: 1px solid #4444;
+    
+    background-color: white;
+    margin: 10px;
+   
+}
+h4{
+    margin-left: 10px;
+    margin-top:10px;
+    text-decoration: underline;
+    font-family: Helvetica,Arial,sans-serif;
+}
+.scontainer{
+    display:flex;
+    
+}
+#sdate{
+    text-align:right;
+    margin-right: 10px;
+}
+#sitem{
+    margin-left:20px;
+    width:100px;
+    border-right:2px solid gray;
+    font-family: Helvetica,Arial,sans-serif;
+    overflow:auto;
+}
 /* Sentry Styling */
 .sentryDiv{
     align-items: center;
     display:flex;
     flex-direction: column;
+}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+.sentryBox{
+    width:600px;
+    height:200px;
+    border: 1px solid black;
+    line-height: 60%;
+    margin-left:10px;
+    font-family: 'Rubik',Helvetica ,sans-serif;
+}
+
+.sentryHeader{
+    color: #3b6ecc;
+    margin-left: 10px;
+}
+.sentryBody{
+    margin-left: 10px;
 }
 
 /* Jenkins Styling */
@@ -139,7 +192,7 @@ input[type=text] {
     align-items: center;
     display:flex;
     flex-direction: column;
-    margin-top:20%;
+    
 }
 /* Service Status Div */
 .serviceStatusDiv{

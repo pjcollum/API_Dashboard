@@ -8,9 +8,31 @@
 
 <button  onclick="window.location.reload()">Click Me</button>
 
-<p>Title of pull request: {{Title}}</p>
+
+
+<div class="sonarcloud">
+        <div class="stitle">
+        <h4>TIS trainee-details</h4>
+        <h5>Title of pull request: <em>{{Title}}</em></h5>
+        <div id="sdate">
+            <p>Date of PR: {{Date}}</p>
+        </div>
+    </div>
+        <div class="scontainer">
+            <div id="sitem">
+                <p>Branch Name: {{Branch}}</p>
+            </div>
+            <div id="sitem">
+                <p>URL Link: {{URL}}</p>
+            </div>
+        
+    
+    </div>
+    </div>
+
+{{!-- <p>Title of pull request: {{Title}}</p>
 <p>Branch Name: {{Branch}}</p>
 <p>Date of PR: {{Date}}</p>
-<p>URL link: {{URL}}</p>
+<p>URL link: {{URL}}</p> --}}
 
 </div>

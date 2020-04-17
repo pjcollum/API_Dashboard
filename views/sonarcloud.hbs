@@ -6,9 +6,32 @@
 
 <button  onclick="window.location.reload()">Click Me</button>
 
-{{!-- 
+ <div class="sonarcloud">
+        <div class="stitle">
+        <h4>trainee-details</h4>
+        <div id="sdate">
+            <p>Analysis Date: {{date}}</p>
+        </div>
+    </div>
+        <div class="scontainer">
+            <div id="sitem">
+                <p>Branch Name: {{name}}</p>
+            </div>
+            <div id="sitem">
+                <p>isMain: {{isMain}}</p>
+            </div>
+          
+            <div id="sitem">
+                <p>Quality Gate is: {{Status}}</p>
+            </div>
+        
+    
+    </div>
+    </div>
+
+    {{!-- 
 <p >The hat has chosen: <h2 class="harryFont1">{{data}}</h2></p> --}}
-<p>Branch 1 Name: {{name}}</p>
+{{!-- <p>Branch 1 Name: {{name}}</p>
 <p>isMain: {{isMain}}</p>
 <p>Analysis Date: {{date}}</p>
 <p>Quality Gate Status: {{Status}}</p>
@@ -19,6 +42,6 @@
     {{#each data}}
         <li>{{@key}}: {{this}}</li>
     {{/each}}
-</ul>
+</ul> --}}
 
 </div>
