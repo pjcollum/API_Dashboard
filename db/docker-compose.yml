@@ -1,0 +1,23 @@
+version: "3"
+services:
+  db:
+    container_name: api-mapping
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./initialization/db:/docker-entrypoint-initdb.d
+      - db-volume:/data/db
+  db-explorer:
+    container_name: api-mapping-express
+    depends_on:
+      - db
+    environment:
+      ME_CONFIG_MONGODB_SERVER: db
+      ME_CONFIG_MONGODB_PORT: 27017
+    image: mongo-express
+    ports:
+      - "8081:8081"
+  
+volumes:
+  db-volume:

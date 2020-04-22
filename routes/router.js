@@ -40,10 +40,7 @@ router.get('/PRsonarcloud', async (req, res) => {
 })
 router.get('/sentry', async (req, res) => {
     let data = await getapi.getSentry()
-
-    //console.log(data)
-
-     sentryArray = []
+         sentryArray = []
 
      for (const object of data){
             let newObject = {

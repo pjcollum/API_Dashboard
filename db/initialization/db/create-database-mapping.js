@@ -1,0 +1,41 @@
+db = new Mongo().getDB("apimapping");
+db.Mapping.insert(
+  {
+    "name":"Admins UI",
+    "sonar-pb":"https://sonarcloud.io/api/project_branches/list?project=Health-Education-England_TIS-ADMINS-UI",
+    "sonar-pr":"https://sonarcloud.io/api/project_pull_requests/list?project=Health-Education-England_TIS-ADMINS-UI",
+    "sentry":"https://sentry.io/api/0/projects/health-education-england-9v/admins-ui/issues/",
+    "jenkins":"https://build.tis.nhs.uk/jenkins/job/HEE/job/TIS-ADMINS-UI/api/json?pretty=true",
+    "service-status":"http://service-status.tis.nhs.uk/api/activeStatus"
+  }
+)
+db.Mapping.insert(
+   {
+    "name":"Profile",
+    "sonar-pb":"https://sonarcloud.io/api/project_branches/list?project=Health-Education-England_TIS-PROFILE",
+    "sonar-pr":"https://sonarcloud.io/api/project_pull_requests/list?project=Health-Education-England_TIS-PROFILE",
+    "sentry":"https://sentry.io/api/0/projects/health-education-england-9v/tis-profile/issues/",
+    "jenkins":"https://build.tis.nhs.uk/jenkins/job/HEE/job/TIS-PROFILE/api/json?pretty=true",
+    "service-status":""
+  }
+)
+db.Mapping.insert(
+  {
+    "name":"TCS",
+    "sonar-pb":"https://sonarcloud.io/api/project_branches/list?project=Health-Education-England_TIS-TCS",
+    "sonar-pr":"https://sonarcloud.io/api/project_pull_requests/list?project=Health-Education-England_TIS-TCS",
+    "sentry":"",
+    "jenkins":"https://build.tis.nhs.uk/jenkins/job/HEE/job/TIS-TCS/api/json?pretty=true",
+    "service-status":""
+  }
+)
+db.Mapping.insert(
+  {
+    "name":"Trainee details",
+    "sonar-pb":"https://sonarcloud.io/api/project_branches/list?project=Health-Education-England_TIS-TRAINEE-DETAILS",
+    "sonar-pr":"https://sonarcloud.io/api/project_pull_requests/list?project=Health-Education-England_TIS-TRAINEE-DETAILS",
+    "sentry":"",
+    "jenkins":"",
+    "service-status":""
+  }
+)
