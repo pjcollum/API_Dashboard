@@ -1,7 +1,7 @@
 const {Router} = require('express')
 const router = Router();
 
-const getapi = require('../lib/getapi')     //imports the getapi.js
+const getapi = require('../lib/getApi')     //imports the getapi.js
 
 router.get('/',(req,res)=>{
     res.render('index')
@@ -22,7 +22,7 @@ router.get('/sonarcloud', async (req, res) => {
     })
     //console.log(data);
 })
-router.get('/PRsonarcloud', async (req, res) => {
+router.get('/prsonarcloud', async (req, res) => {
     let data = await getapi.getPRSonarcloud()
     //console.log(data)
     data = JSON.parse(data);
